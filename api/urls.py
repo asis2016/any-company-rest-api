@@ -1,7 +1,6 @@
-from django.urls import path
-
-from services.views import ServiceAPIView
+from django.urls import path, include
 
 urlpatterns = [
-    path('', ServiceAPIView.as_view())
+    # services
+    path('services/', include('services.urls'))
 ]

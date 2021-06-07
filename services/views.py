@@ -12,7 +12,13 @@ class ServiceListView(ListView):
     context_object_name = 'services'
 
 
-class ServiceAPIView(generics.ListAPIView):
+class ServiceList(generics.ListAPIView):
     """ Service list API. """
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
+
+
+class ServiceRetrieve(generics.RetrieveAPIView):
+    """ Service detail API. """
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
