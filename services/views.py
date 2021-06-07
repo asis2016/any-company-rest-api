@@ -1,3 +1,18 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from rest_framework import generics
 
-# Create your views here.
+from .models import Service
+from .serializers import ServiceSerializer
+
+
+class ServiceListView(ListView):
+    """ Service list view. """
+    model = Service
+    template_name = 'services/index.html'
+    context_object_name = 'services'
+
+
+class ServiceAPIView(generics.ListAPIView):
+    """ Service list API. """
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer

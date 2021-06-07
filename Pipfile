@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+djangorestframework = "*"{{ service.title }}
 
 [dev-packages]
 
