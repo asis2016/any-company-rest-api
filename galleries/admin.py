@@ -8,4 +8,4 @@ class GalleryAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'created', 'modified',)
 
 
-admin.site.register(Gallery)
+admin.site.register(Gallery, GalleryAdmin)

@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import GalleryList
+from .views import GalleryListCreate, GalleryRetrieveUpdateDestroy
 
 urlpatterns = [
-    path('', GalleryList.as_view())
+    path('<uuid:pk>/', GalleryRetrieveUpdateDestroy.as_view()),
+    path('', GalleryListCreate.as_view())
 ]
