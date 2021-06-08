@@ -1,4 +1,3 @@
-import uuid
 from django.urls import path
 
 from .views import ServiceList, ServiceRetrieve
