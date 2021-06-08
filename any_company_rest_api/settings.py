@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'services.apps.ServicesConfig',
     'projects.apps.ProjectsConfig',
-    
-    
+    'galleries.apps.GalleriesConfig',
 ]
 
 MIDDLEWARE = [
