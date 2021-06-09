@@ -11,7 +11,7 @@ class Testimonial(TimeStampedModel):
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     client_name = models.CharField(max_length=100)
     client_position = models.CharField(max_length=100, blank=True)
-    image_url = models.TextField(blank=True)
+    image_url = models.TextField()
     testimonial = models.TextField(blank=True)
 
     def __str__(self):

@@ -4,7 +4,9 @@ from .models import Gallery
 
 
 class GallerySerializer(serializers.ModelSerializer):
-    """ Serializers the Gallery model. """
+    """
+    Serializers the Gallery model.
+    """
 
     class Meta:
         fields = ('id', 'title', 'image_url', 'caption', 'created', 'modified',)

@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Testimonial
+
+
+class TestimonialAdmin(admin.ModelAdmin):
+    """
+    Displays Testimonials in admin site.
+    """
+    list_display = ('id', 'client_name', 'created',)
+
+
+admin.site.register(Testimonial, TestimonialAdmin)
