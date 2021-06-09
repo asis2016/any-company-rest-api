@@ -16,11 +16,30 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# schemas and documentation
+from rest_framework.documentation import include_docs_urls
+from rest_framework.schemas import get_schema_view
+
+TITLE = 'Any Company'
+schema = get_schema_view(title=TITLE)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('services.urls')),
-
     # api/v1/
     path('api/v1/', include('api.urls')),
+
+    # http://127.0.0.1:8000/api-auth/login/
+    path('api-auth/', include('rest_framework.urls')),
+
+    # http://127.0.0.1:8000/api/v1/rest-auth/login/
+    # http://127.0.0.1:8000/api/v1/rest-auth/logout/
+    # http://127.0.0.1:8000/api/v1/rest-auth/password/reset/
+    path('api/v1/rest-auth/', include('rest_auth.urls')),
+
+    # schemas and documentation
+
+    path('', include_docs_urls(title=TITLE, description='A web api for Any Company.')),
+    path('schema/', schema),
+
 ]

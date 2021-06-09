@@ -38,6 +38,8 @@ INSTALLED_APPS = [
 
     # rest_framework
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
     'corsheaders',
 
     # local
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'projects.apps.ProjectsConfig',
     'galleries.apps.GalleriesConfig',
+    'testimonials.apps.TestimonialsConfig',
 ]
 
 MIDDLEWARE = [
@@ -132,8 +135,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Rest framework settings
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
+        #'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.AllowAny',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication', # new
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
 
 # cors
