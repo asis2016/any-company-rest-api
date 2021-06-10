@@ -9,6 +9,7 @@ djangorestframework = "*"
 django-rest-auth = "*"
 coreapi = "*"
 pyyaml = "*"
+django-rest-swagger = "*"
 
 [dev-packages]
 

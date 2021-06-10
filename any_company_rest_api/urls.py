@@ -19,9 +19,11 @@ from django.urls import path, include
 # schemas and documentation
 from rest_framework.documentation import include_docs_urls
 from rest_framework.schemas import get_schema_view
+from rest_framework_swagger.views import get_swagger_view
 
 TITLE = 'Any Company'
 schema = get_schema_view(title=TITLE)
+swagger_schema_view = get_swagger_view(title=TITLE)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,8 +39,10 @@ urlpatterns = [
     # http://127.0.0.1:8000/api/v1/rest-auth/password/reset/
     path('api/v1/rest-auth/', include('rest_auth.urls')),
 
-    # schemas and documentation
+    # swagger
+    path('swagger-docs', swagger_schema_view),
 
+    # schemas and documentation
     path('', include_docs_urls(title=TITLE, description='A web api for Any Company.')),
     path('schema/', schema),
 
