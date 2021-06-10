@@ -39,11 +39,11 @@ urlpatterns = [
     # http://127.0.0.1:8000/api/v1/rest-auth/password/reset/
     path('api/v1/rest-auth/', include('rest_auth.urls')),
 
-    # swagger
-    path('swagger-docs', swagger_schema_view),
-
     # schemas and documentation
     path('', include_docs_urls(title=TITLE, description='A web api for Any Company.')),
     path('schema/', schema),
+
+    # swagger
+    path('swagger-docs', swagger_schema_view),
 
 ]
