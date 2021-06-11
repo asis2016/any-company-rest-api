@@ -10,6 +10,7 @@ django-rest-auth = "*"
 coreapi = "*"
 pyyaml = "*"
 django-rest-swagger = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
