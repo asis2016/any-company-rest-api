@@ -4,7 +4,9 @@ from .models import Gallery
 
 
 class GalleryAdmin(admin.ModelAdmin):
-    """ Gallery admin. """
+    """
+    Displays Gallery on Django administration.
+    """
     list_display = ('id', 'title', 'created', 'modified',)
 
 

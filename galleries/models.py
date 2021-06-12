@@ -5,7 +5,9 @@ from django.db import models
 
 
 class Gallery(TimeStampedModel):
-    """ Gallery model. """
+    """
+    The Gallery model.
+    """
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     title = models.CharField(max_length=100, blank=True)
     image_url = models.TextField()

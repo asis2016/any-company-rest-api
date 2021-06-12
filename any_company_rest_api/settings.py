@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'projects.apps.ProjectsConfig',
     'galleries.apps.GalleriesConfig',
     'testimonials.apps.TestimonialsConfig',
+    'brands.apps.BrandsConfig',
 ]
 
 MIDDLEWARE = [

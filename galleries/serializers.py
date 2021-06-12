@@ -5,7 +5,7 @@ from .models import Gallery
 
 class GallerySerializer(serializers.ModelSerializer):
     """
-    Serializers the Gallery model.
+    Serializes the Gallery model.
     """
 
     class Meta:

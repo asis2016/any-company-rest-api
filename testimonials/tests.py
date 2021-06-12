@@ -5,7 +5,7 @@ from .models import Testimonial
 
 class TestimonialTest(TestCase):
     """
-    A test case for Testimonial.
+    The test case for Testimonial.
     """
 
     @classmethod
