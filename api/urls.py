@@ -1,9 +1,8 @@
 from django.urls import path, include
 
 urlpatterns = [
-    path('galleries/', include('galleries.urls')),
-    path('services/', include('services.urls')),
-    path('projects/', include('projects.urls')),
-    path('testimonials/', include('testimonials.urls')),
-
+    path(r'galleries/', include(('galleries.urls', 'galleries'), namespace='galleries')),
+    path('services/', include(('services.urls', 'services'), namespace='services')),
+    path('projects/', include(('projects.urls', 'projects'), namespace='projects')),
+    path('testimonials/', include(('testimonials.urls', 'testinominals'), namespace='testinominals')),
 ]
