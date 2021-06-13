@@ -7,3 +7,4 @@ release:
     - python manage.py collectstatic --noinput
 run:
   web: gunicorn any_company_rest_api.wsgi
+

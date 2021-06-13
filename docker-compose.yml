@@ -3,9 +3,10 @@ version: '3.8'
 services:
   web:
     build: .
-    #command: python /code/manage.py runserver 0.0.0.0:8000
     command: gunicorn any_company_rest_api.wsgi -b 0.0.0.0:8000
-    #todo: environment
+    environment:
+      - SECRET_KEY=replace_from_readme.md
+      - DEBUG=1
     volumes:
       - .:/code
     ports:
