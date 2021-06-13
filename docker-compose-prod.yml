@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
   web:
     build: .
-    command: gunicorn any-company-rest-api.wsgi -b 0.0.0.0:8000
+    command: gunicorn any_company_rest_api.wsgi -b 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
