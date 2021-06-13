@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = ['https://clever-payne-df9fc6.netlify.app/', 'any-company-rest-api.herokuapp.com', 'localhost',
-                 '127.0.0.1', '127.0.0.1:8000']
+                 '127.0.0.1', '127.0.0.1:8000','0.0.0.0']
 
 # Application definition
 
