@@ -11,6 +11,8 @@ coreapi = "*"
 pyyaml = "*"
 django-rest-swagger = "*"
 django-cors-headers = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
