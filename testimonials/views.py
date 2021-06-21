@@ -4,7 +4,7 @@ from .models import Testimonial
 from .serializers import TestimonialSerializer
 
 
-class TestimonialListCreate(generics.ListCreateAPIView):
+class TestimonialListCreateAPIView(generics.ListCreateAPIView):
     """
     Lists a testimonial or creates a Testimonial model instance.
     """
@@ -12,9 +12,9 @@ class TestimonialListCreate(generics.ListCreateAPIView):
     serializer_class = TestimonialSerializer
 
 
-class TestimonialRetrieve(generics.RetrieveAPIView):
+class TestimonialRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieves a Testimonial model instance based on id.
+    Retrieves, updates or destroy a Testimonial model instance based on id.
     """
     queryset = Testimonial.objects.all()
     serializer_class = TestimonialSerializer

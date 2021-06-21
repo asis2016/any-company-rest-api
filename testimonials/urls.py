@@ -1,8 +1,8 @@
 from django.urls import path
 
-from .views import TestimonialListCreate, TestimonialRetrieve
+from .views import TestimonialListCreateAPIView, TestimonialRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
-    path('<uuid:pk>/', TestimonialRetrieve.as_view()),
-    path('', TestimonialListCreate.as_view())
+    path('<uuid:pk>/', TestimonialRetrieveUpdateDestroyAPIView.as_view()),
+    path('', TestimonialListCreateAPIView.as_view())
 ]

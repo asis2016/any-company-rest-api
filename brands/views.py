@@ -1,14 +1,17 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 
 from .models import Brand
+from .permissions import IsAuthorOrReadOnly
 from .serializers import BrandSerializer
-
 
 class BrandListCreateAPIView(generics.ListCreateAPIView):
     """
     Lists a Brand or creates a Brand instance.
     """
     # todo LoginRequiredMixins
+    #permission_classes=(permissions.IsAuthenticated,)
+    #permission_classes = (IsAuthorOrReadOnly,)
+    permission_classes=(permissions.IsAuthenticatedOrReadOnly,)
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
 

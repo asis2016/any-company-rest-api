@@ -1,6 +1,5 @@
 from rest_framework import generics
 
-from rest_framework import permissions
 from .models import Gallery
 from .serializers import GallerySerializer
 

@@ -7,7 +7,7 @@ class BrandAdmin(admin.ModelAdmin):
     """
     Displays Brand on Django administration.
     """
-    list_display = ('id', 'title', 'image_url', 'created', 'modified')
+    list_display = ('id', 'title', 'image_url', 'created', 'author')
 
 
 admin.site.register(Brand, BrandAdmin)

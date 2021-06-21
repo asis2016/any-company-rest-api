@@ -10,7 +10,9 @@ class TestimonialTest(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        """ Creates initial data at the class level. """
+        """
+        Creates initial data at the class level.
+        """
         testimonial = Testimonial.objects.create(
             id='550e8400e29b41d4a716446655440000',
             client_name='Jane Austin',
@@ -21,7 +23,9 @@ class TestimonialTest(TestCase):
         testimonial.save()
 
     def test_title(self):
-        """ Test if title works. """
+        """
+        Test if title works.
+        """
         data = Testimonial.objects.get(id='550e8400e29b41d4a716446655440000')
         expected_title = f'{data.client_name}'
         self.assertEqual(expected_title, 'Jane Austin')
