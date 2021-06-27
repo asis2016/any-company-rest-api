@@ -9,5 +9,5 @@ class GallerySerializer(serializers.ModelSerializer):
     """
 
     class Meta:
-        fields = ('id', 'title', 'image_url', 'caption', 'created', 'modified',)
+        fields = ('id', 'title', 'image_url', 'caption', 'created', 'modified','author',)
         model = Gallery

@@ -7,7 +7,7 @@ class GalleryAdmin(admin.ModelAdmin):
     """
     Displays Gallery on Django administration.
     """
-    list_display = ('id', 'title', 'created', 'modified',)
+    list_display = ('id', 'title', 'created', 'modified','author',)
 
 
 admin.site.register(Gallery, GalleryAdmin)
